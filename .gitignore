@@ -43,3 +43,4 @@ Thumbs.db
 *.db
 
 prisma/dev.db
+prisma/dev.db-journal
