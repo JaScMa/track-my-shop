@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { PurchaseService } from './purchase.service';
-import { Purchase } from '@prisma/client';
+import { PurchaseDto } from '../dtos/purchase.dto';
 
 @Controller('purchase')
 export class PurchaseController {
@@ -10,7 +10,7 @@ export class PurchaseController {
     }
 
     @Post()
-    createPurchase(@Body() data: Purchase) {
+    createPurchase(@Body() data: PurchaseDto) {
         return this.purchaseService.createPurchase(data)
     }
 

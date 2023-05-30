@@ -1,11 +1,12 @@
 import { Injectable } from "@nestjs/common";
-import { PrismaClient, Purchase } from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
+import { PurchaseDto } from "./dtos/purchase.dto";
 
 @Injectable()
 export class PrismaService {
     prisma = new PrismaClient()
 
-    createPurchase(data: Purchase) { 
+    createPurchase(data: PurchaseDto) { 
         return this.prisma.purchase.create({data})
     }
 

@@ -25,5 +25,5 @@ model Purchase {
   createdAt DateTime @default(now())
   date      DateTime
   name      String
-  price     Int
+  price     Float
 }
