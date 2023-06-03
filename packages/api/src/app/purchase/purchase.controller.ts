@@ -15,6 +15,5 @@ export class PurchaseController {
     }
 
     constructor(
-        private purchaseService: PurchaseService
-    ) { }
+        private purchaseService: PurchaseService    ) { }
 }
