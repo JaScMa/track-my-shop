@@ -44,3 +44,4 @@ Thumbs.db
 
 prisma/dev.db
 prisma/dev.db-journal
+packages/app/src/environments
