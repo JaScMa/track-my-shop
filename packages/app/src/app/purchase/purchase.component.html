@@ -1,1 +1,8 @@
-<p>purchase works!</p>
+<table mat-table [dataSource]="(purchases$ | async)??[]">
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let purch"> {{purch.name}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="['name']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['name'];"></tr>
+</table>

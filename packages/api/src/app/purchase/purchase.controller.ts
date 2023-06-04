@@ -4,7 +4,7 @@ import { PurchaseDto } from '../dtos/purchase.dto';
 
 @Controller('purchase')
 export class PurchaseController {
-    @Get()
+    @Get('all')
     allPurchase() {
         return this.purchaseService.getAllPurchases()
     }
